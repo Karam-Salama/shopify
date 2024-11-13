@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "837848575000",
+    "firebase_url": "https://dalel-app-634fe-default-rtdb.firebaseio.com",
+    "project_id": "dalel-app-634fe",
+    "storage_bucket": "dalel-app-634fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837848575000:android:408267f98293934007276d",
+        "android_client_info": {
+          "package_name": "com.example.shopify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837848575000-4tmulr3smaqg4cvkmbt2e8mtn2uo01cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLQUWo21r6Ih9U7_bLIVwYpJ_Pt750yYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837848575000-4tmulr3smaqg4cvkmbt2e8mtn2uo01cu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "837848575000-dh7hg9bhpev3k4khcql2gaav919pr7tb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dalelApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
