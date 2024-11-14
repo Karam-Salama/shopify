@@ -1,36 +1,26 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import '../../../core/functions/navigation.dart';
-import '../../auth/presentation/pages/signIn_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shopify/core/functions/navigation.dart';
+import 'package:shopify/modules/auth/presentation/pages/signIn_page.dart';
+import 'package:shopify/modules/splash/bloc/splash_cubit.dart';
+import 'package:shopify/modules/splash/bloc/splash_state.dart';
 import '../widgets/splash_body.dart';
 
-class SplashPage extends StatefulWidget {
+class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
   static const String routeName = 'splash';
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
-  @override
-  void initState() {
-    super.initState();
-    delayedNavigate(SignInPage.routeName);
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: SplashPageBody());
-  }
-
-  void delayedNavigate(String routeName) async {
-    await Future.delayed(
-      const Duration(seconds: 2),
-      () {
-        customReplacementNavigate(context, routeName);
+    return BlocListener<SplashCubit, SplashState>(
+      listener: (context, state) {
+        if(state is UnAuthenticated){
+          customReplacementNavigate(context, SignInPage.routeName);
+        }
       },
+      child: const Scaffold(body: SplashPageBody()),
     );
   }
 }
