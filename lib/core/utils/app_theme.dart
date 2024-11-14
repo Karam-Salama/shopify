@@ -6,9 +6,7 @@ class AppTheme {
   static final lightTheme = ThemeData(
     primaryColor: AppColors.primary,
     fontFamily: 'CircularStd',
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-    ),
+    scaffoldBackgroundColor: AppColors.lightBackground,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       titleTextStyle: TextStyle(
@@ -20,7 +18,7 @@ class AppTheme {
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
-      backgroundColor:AppColors.primary,
+      backgroundColor: AppColors.primary,
       selectedItemColor: Color(0xFF222222),
       selectedIconTheme: IconThemeData(
         size: 35,
@@ -33,44 +31,16 @@ class AppTheme {
         color: Color(0xFFF8F8F8),
       ),
     ),
-    textTheme: const TextTheme(
-      titleLarge: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 30.0,
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-      ),
-      bodyLarge: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 25.0,
-        color: Colors.black,
-        fontWeight: FontWeight.w500,
-      ),
-      bodyMedium: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 25.0,
-        color: Colors.black,
-        fontWeight: FontWeight.w400,
-      ),
-      bodySmall: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 20.0,
-        color: Colors.black,
-        fontWeight: FontWeight.w400,
-      ),
-    ),
     dividerTheme: const DividerThemeData(
       space: 10,
       color: AppColors.primary,
     ),
   );
-  
-  
-  
+
   static final darkTheme = ThemeData(
     primaryColor: AppColors.primary,
     fontFamily: 'CircularStd',
-    scaffoldBackgroundColor: AppColors.background,
+    scaffoldBackgroundColor: AppColors.darkBackground,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       titleTextStyle: TextStyle(
@@ -85,7 +55,7 @@ class AppTheme {
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
-      backgroundColor:Color(0xFF141A2E),
+      backgroundColor: Color(0xFF141A2E),
       selectedItemColor: AppColors.primary,
       selectedIconTheme: IconThemeData(
         size: 35,
@@ -96,32 +66,6 @@ class AppTheme {
       unselectedIconTheme: IconThemeData(
         size: 28,
         color: Color(0xFFF8F8F8),
-      ),
-    ),
-    textTheme: const TextTheme(
-      titleLarge: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 30.0,
-        color: Colors.white,
-        fontWeight: FontWeight.bold,
-      ),
-      bodyLarge: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 25.0,
-        color: Colors.white,
-        fontWeight: FontWeight.w500,
-      ),
-      bodyMedium: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 25.0,
-        color: Colors.white,
-        fontWeight: FontWeight.w400,
-      ),
-      bodySmall: TextStyle(
-        fontFamily: "CircularStd",
-        fontSize: 20.0,
-        color: Colors.white,
-        fontWeight: FontWeight.w400,
       ),
     ),
     dividerTheme: const DividerThemeData(
