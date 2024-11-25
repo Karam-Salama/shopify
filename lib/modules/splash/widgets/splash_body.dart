@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:shopify/core/utils/app_colors.dart';
-import '../../../core/utils/app_vectors.dart';
+import 'package:shopify/core/utils/app_images.dart';
 
 class SplashPageBody extends StatelessWidget {
   const SplashPageBody({super.key});
@@ -10,7 +9,7 @@ class SplashPageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primary,
-      body: Center(child: SvgPicture.asset(AppVectors.appLogo)),
+      body: Center(child: Image.asset(AppImages.logo)),
     );
   }
 }
