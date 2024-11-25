@@ -1,8 +1,10 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/app_colors.dart';
+import '../../modules/auth/presentation/bloc/sign_up_cubit.dart';
 
 class CustomCheckBox extends StatefulWidget {
   const CustomCheckBox({super.key});
@@ -23,6 +25,8 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
       onChanged: (newValue) {
         setState(() {
           value = newValue!;
+          BlocProvider.of<SignUpCubit>(context)
+              .updateTermsAndConditionsCheckbox(newValue: newValue);
         });
       },
     );

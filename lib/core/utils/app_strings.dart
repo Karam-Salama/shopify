@@ -58,4 +58,7 @@ abstract class AppStrings {
   static const String more = "More";
 }
 
-class FirebaseCollectionName {}
+class FirebaseCollectionName {
+  static const String users = 'Users';
+
+}

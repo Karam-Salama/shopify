@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/services/service_locator.dart';
+import '../../domain/usecases/reset_pass.dart';
+import '../bloc/reset_pass_cubit.dart';
 import '../widgets/forget_password_body.dart';
 
 class ForgetPasswordPage extends StatelessWidget {
@@ -7,6 +11,11 @@ class ForgetPasswordPage extends StatelessWidget {
   static const String routeName = ' ForgetPassword';
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: ForgetPasswordBody());
+    return Scaffold(
+      body: BlocProvider(
+        create: (context) => ResetPassCubit(getIt<ResetPassUsecase>()),
+        child: const ForgetPasswordBody(),
+      ),
+    );
   }
 }
